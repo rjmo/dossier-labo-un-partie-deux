@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../scripts/script.js"></script>
+    <title>STRming | Nos films</title>
+  </head>
+  <body class="backgroundbody">
+    <!-- HEADER -->
+
+    <header style="position: sticky;top: 0; z-index: 1;">
+      <nav>
+        <div class="ulmenu">
+          <!-- LOGO -->
+          <div class="li">
+            <a href="../index.html"
+              ><img
+                style="width: 130px;"
+                src="../assets/logo/logofond.png"
+                alt="logo"
+            /></a>
+          </div>
+          <!-- FIN LOGO -->
+
+          <!-- NOS FILMS -->
+          <div class="li">
+            <a style="margin-top: 5px;" class="amenu" href="nosflms.html"
+              >Nos films</a
+            >
+          </div>
+          <!-- FIN NOS FILMS -->
+
+          <!-- CATÉGORIES -->
+          <div class="dropdown li ">
+            <a
+              style="margin-top: 5px;"
+              class="amenu hvr-bubble-bottom "
+              href="#"
+              >Catégories</a
+            >
+            <div class="dropdown-content">
+              <a href="#">Action</a>
+              <a href="#">Drame et répertoire</a>
+              <a href="#">Comédie</a>
+              <a href="#">Science-fiction</a>
+              <a href="#">Horreur</a>
+              <a href="#">Suspense</a>
+              <a href="#">Comédies musicales</a>
+              <a href="#">Pour le temps des Fêtes</a>
+              <a href="#">Québécois</a>
+              <a href="#">Pour la Famille</a>
+            </div>
+          </div>
+          <!-- FIN CATÉGORIES -->
+
+          <!-- DEVENIR MEMBRE ET CONNEXION -->
+          <div style="float: right;">
+            <!-- DEVENIR MEMBRE -->
+            <div class="li" style="margin-right: 29px;">
+              <a
+                onclick="montrer('iddev');"
+                style="margin-top: 5px;"
+                class="amenu"
+              >
+                <img
+                  style="position: absolute;width: 24px;margin-left: -26px;"
+                  src="../assets/icons/astroicon.svg"
+                  alt="icon"
+                />
+                Devenir membre
+              </a>
+
+              <!-- 2 Modal -->
+
+              <div id="iddev" class="modal">
+                <span
+                  onclick="cacher('iddev');"
+                  class="close"
+                  title="Close Modal"
+                  >&times;</span
+                >
+                <!-- Modal Content -->
+                <form class="modal-content animate" action="#">
+                  <div class="container">
+                    <span style="text-align: center;">Inscription</span>
+
+                    <label><b>Prénom</b></label>
+                    <input
+                      type="text"
+                      placeholder="Prénom"
+                      name="uname"
+                      required
+                    />
+
+                    <label><b>Nom</b></label>
+                    <input
+                      type="text"
+                      placeholder="Nom"
+                      name="uname"
+                      required
+                    />
+
+                    <label><b>Courriel</b></label>
+                    <input
+                      type="text"
+                      placeholder="Courriel"
+                      name="uname"
+                      required
+                    />
+
+                    <label><b>Mot de passe</b></label>
+                    <input
+                      type="password"
+                      placeholder="Mot de passe"
+                      name="psw"
+                      required
+                    />
+
+                    <button class="subbutton" type="submit">S'inscrire</button>
+
+                    <button
+                      class="subbutton"
+                      type="button"
+                      onclick="cacher('iddev')"
+                    >
+                      Annuler
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- fin modal -->
+            </div>
+            <!-- FIN DEVENIR MEMBRE -->
+
+            <!-- CONNEXION -->
+            <div class="li">
+              <a
+                onclick="montrer('idconx');"
+                style="margin-top: 5px;"
+                class="amenu"
+              >
+                <img
+                  style="position: absolute;width: 24px;margin-left: -26px;"
+                  src="../assets/icons/connexion_.svg"
+                  alt="icon"
+                />
+                Connexion
+              </a>
+
+              <!-- 1 Modal -->
+
+              <div id="idconx" class="modal">
+                <span
+                  onclick="cacher('idconx');"
+                  class="close"
+                  title="Close Modal"
+                  >&times;</span
+                >
+                <!-- Modal Content -->
+                <form class="modal-content animate" action="#">
+                  <div class="container">
+                    <span style="text-align: center;">Connexion</span>
+                    <label><b>Courriel</b></label>
+                    <input
+                      type="text"
+                      placeholder="Courriel"
+                      name="uname"
+                      required
+                    />
+
+                    <label><b>Mot de passe</b></label>
+                    <input
+                      type="password"
+                      placeholder="Mot de passe"
+                      name="psw"
+                      required
+                    />
+
+                    <button class="subbutton" type="submit">
+                      Se connecter
+                    </button>
+
+                    <button
+                      class="subbutton"
+                      type="button"
+                      onclick="cacher('idconx')"
+                    >
+                      Annuler
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- fin modal -->
+            </div>
+            <!-- FIN CONNEXION -->
+          </div>
+          <!-- FIN DEVENIR MEMBRE ET CONNEXION -->
+        </div>
+      </nav>
+    </header>
+    <!-- FIN HEADER -->
+
+    <main>
+      <div>
+        <img
+          style="width: 103%;margin-top: -3%;position: fixed;z-index: -1;"
+          src="../assets/images/base.svg"
+          alt="logo"
+        />
+      </div>
+      <!-- CARD RANGÉE 1 -->
+      <div class="divfilm ">
+        <!-- CARD -->
+        <section class="sectionfilm ">
+          <a onclick="montrer('idcard1'); play('Video01');" href="#">
+            <img
+              class="imgfilm"
+              src="../assets/filmscover/inception.jpg"
+              alt="inception"
+            />
+          </a>
+          <h1>Inception</h1>
+          <h4>Christopher Nolan</h4>
+          <h4>Action, Adventure, Sci-Fi</h4>
+          <h4>$ 6.99</h4>
+          <!-- CART -->
+
+          <div id="idcart1" style="display: none;">
+            <a class="cart" href="#"
+              ><img
+                style="width: 14%;"
+                src="../assets/icons/cart.svg"
+                alt="ajouter icon"
+              />
+              <h4>
+                Ajouter
+              </h4></a
+            >
+          </div>
+          <!-- FIN CART -->
+
+          <!-- MODAL CARD PREVIEW-->
+
+          <div id="idcard1" class="modal">
+            <span
+              onclick="cacher('idcard1'); pause('Video01');"
+              class="close"
+              title="Close Modal"
+              >&times;</span
+            >
+            <!-- Modal Content -->
+            <div class="modal-content animate" style="width: 52%;">
+              <div class="container" style="position: absolute;">
+                <span style="margin-left: 36%;padding: 23px; font-size: 20px;"
+                  >Inception</span
+                >
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/YoHD9XEInc0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="sectionfilm ">
+          <a onclick="montrer('idcard2');play('Video02');" href="#">
+            <img
+              class="imgfilm"
+              src="../assets/filmscover/cidadededeus.jpg"
+              alt="cidadededeus"
+            />
+          </a>
+          <h1>La cité de Dieu</h1>
+          <h4>Fernando Meirelles, Kátia Lund</h4>
+          <h4>Crime, Drama</h4>
+          <h4>$ 6.99</h4>
+          <!-- CART -->
+
+          <div id="idcart2" style="display: none;">
+            <a class="cart" href="#"
+              ><img
+                style="width: 14%;"
+                src="../assets/icons/cart.svg"
+                alt="ajouter icon"
+              />
+              <h4>
+                Ajouter
+              </h4></a
+            >
+          </div>
+          <!-- FIN CART -->
+
+          <!-- MODAL CARD PREVIEW-->
+
+          <div id="idcard2" class="modal">
+            <span
+              onclick="cacher('idcard2'); pause('Video02');"
+              class="close"
+              title="Close Modal"
+              >&times;</span
+            >
+            <!-- Modal Content -->
+            <div class="modal-content animate" style="width: 52%;">
+              <div class="container" style="position: absolute;">
+                <span style="margin-left: 36%;padding: 23px; font-size: 20px;"
+                  >La cité de Dieu</span
+                >
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/dcUOO4Itgmw"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="sectionfilm ">
+          <a onclick="montrer('idcard3');play('Video03');" href="#">
+            <img
+              class="imgfilm"
+              src="../assets/filmscover/mandalorian.jpg"
+              alt="mandalorian"
+            />
+          </a>
+          <h1>Mandalorian</h1>
+          <h4>Jon Favreau</h4>
+          <h4>Action, Adventure, Sci-Fi</h4>
+          <h4>$ 6.99</h4>
+          <!-- CART -->
+
+          <div id="idcart3" style="display: none;">
+            <a class="cart" href="#"
+              ><img
+                style="width: 14%;"
+                src="../assets/icons/cart.svg"
+                alt="ajouter icon"
+              />
+              <h4>
+                Ajouter
+              </h4></a
+            >
+          </div>
+          <!-- FIN CART -->
+
+          <!-- MODAL CARD PREVIEW-->
+
+          <div id="idcard3" class="modal">
+            <span
+              onclick="cacher('idcard3'); pause('Video03');"
+              class="close"
+              title="Close Modal"
+              >&times;</span
+            >
+            <!-- Modal Content -->
+            <div class="modal-content animate" style="width: 52%;">
+              <div class="container" style="position: absolute;">
+                <span style="margin-left: 36%;padding: 23px; font-size: 20px;"
+                  >Mandalorian</span
+                >
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/JRdiYZoSeBE"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="sectionfilm ">
+          <a onclick="montrer('idcard4');play('Video04');" href="#">
+            <img
+              class="imgfilm"
+              src="../assets/filmscover/johnwick3.jpg"
+              alt="johnwick3"
+            />
+          </a>
+          <h1>John Wick 3: Parabellum</h1>
+          <h4>Chad Stahelski</h4>
+          <h4>Action, Crime, Thriller</h4>
+          <h4>$ 6.99</h4>
+          <!-- CART -->
+
+          <div id="idcart4" style="display: none;">
+            <a class="cart" href="#"
+              ><img
+                style="width: 14%;"
+                src="../assets/icons/cart.svg"
+                alt="ajouter icon"
+              />
+              <h4>
+                Ajouter
+              </h4></a
+            >
+          </div>
+          <!-- FIN CART -->
+
+          <!-- MODAL CARD PREVIEW-->
+
+          <div id="idcard4" class="modal">
+            <span
+              onclick="cacher('idcard4'); pause('Video04');"
+              class="close"
+              title="Close Modal"
+              >&times;</span
+            >
+            <!-- Modal Content -->
+            <div class="modal-content animate" style="width: 52%;">
+              <div class="container" style="position: absolute;">
+                <span style="margin-left: 36%;padding: 23px; font-size: 20px;"
+                  >John Wick 3</span
+                >
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/CcQpYEcZXaU"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FIN CARD -->
+      </div>
+      <!-- FIN CARD RANGÉE 1 -->
+    </main>
+  </body>
+</html>
